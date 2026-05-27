@@ -1,0 +1,97 @@
+{
+	"meta": {
+		"instanceId": "sharetribe-public-template"
+	},
+	"name": "[template] Approve User After Stripe Membership Fee",
+	"nodes": [
+		{
+			"parameters": {
+				"content": "## [template] Approve User After Stripe Membership Fee\n\nMembership-fee monetization for marketplaces that require user approval before access. After a user pays the membership fee through Stripe Checkout, this workflow approves them in Sharetribe so they can sign in and start using the marketplace.\n\n### How it works\n\n1. The Stripe trigger fires when a Stripe Checkout session is completed.\n2. The Sharetribe action reads the Sharetribe user id from the checkout session's `client_reference_id` and approves the user.\n3. The user's state moves from `pendingApproval` to `active`. If you have enabled the \"User approved\" notification in Sharetribe Console, Sharetribe sends the welcome email automatically.\n\n### Setup steps\n\n- Connect a Stripe credential.\n- Connect a Sharetribe credential using your Integration API Client ID and Client Secret from [Console > Build > Applications](https://console.sharetribe.com/advanced/applications).\n- In Sharetribe Console > Build > General, turn on \"Require user approval\" so new users start in `pendingApproval`.\n- In Sharetribe Console > Build > Content > Email notifications, enable the \"User approved\" notification so members receive the welcome email when this workflow approves them.\n- Create the Stripe Checkout product or price you sell as the membership fee.\n- When you create the Stripe Checkout session from your frontend or backend, pass the Sharetribe user id as `client_reference_id`. That is the field this workflow reads to know which user to approve.\n- Start the trigger in **Test** mode to validate against a Stripe test checkout, then switch to **Live** when you're ready to publish.\n\n### Customization\n\n- Add a Sharetribe action after approval to tag the member, grant permissions, or move them into a specific user type so they land in the right experience.\n- Filter for a specific Stripe product or price id with an IF node if you sell more than one item through Stripe Checkout and only the membership purchase should trigger approval.\n- Author your own welcome email in Sharetribe Console under Build > Content > Email texts and reference it from a custom email step instead of relying on the built-in notification.",
+				"width": 480,
+				"height": 1024
+			},
+			"type": "n8n-nodes-base.stickyNote",
+			"typeVersion": 1,
+			"position": [-540, 80],
+			"id": "sticky-description",
+			"name": "Sticky Note"
+		},
+		{
+			"parameters": {
+				"content": "## Wait for Stripe payment\n\nFires when a Stripe Checkout session is completed. The user that just paid is identified by `client_reference_id` on the session.",
+				"width": 280,
+				"height": 440,
+				"color": 7
+			},
+			"type": "n8n-nodes-base.stickyNote",
+			"typeVersion": 1,
+			"position": [80, 144],
+			"id": "sticky-step1",
+			"name": "Sticky Note1"
+		},
+		{
+			"parameters": {
+				"content": "## Approve the user\n\nReads the user id from `client_reference_id` and approves the user in Sharetribe. The user's state flips to `active`.",
+				"width": 280,
+				"height": 440,
+				"color": 7
+			},
+			"type": "n8n-nodes-base.stickyNote",
+			"typeVersion": 1,
+			"position": [400, 144],
+			"id": "sticky-step2",
+			"name": "Sticky Note2"
+		},
+		{
+			"parameters": {
+				"events": ["checkout.session.completed"]
+			},
+			"type": "n8n-nodes-base.stripeTrigger",
+			"typeVersion": 1,
+			"position": [160, 336],
+			"id": "stripe-trigger",
+			"name": "When Stripe Checkout Completes",
+			"credentials": {
+				"stripeApi": {
+					"id": "credential-id",
+					"name": "Stripe Credential"
+				}
+			}
+		},
+		{
+			"parameters": {
+				"resource": "user",
+				"operation": "approve",
+				"userId": "={{ $json.data.object.client_reference_id }}"
+			},
+			"type": "n8n-nodes-sharetribe.sharetribe",
+			"typeVersion": 1,
+			"position": [480, 336],
+			"id": "sharetribe-approve-user",
+			"name": "Approve Sharetribe User",
+			"retryOnFail": true,
+			"waitBetweenTries": 2000,
+			"maxTries": 3,
+			"credentials": {
+				"sharetribeOAuth2Api": {
+					"id": "credential-id",
+					"name": "Sharetribe Credential"
+				}
+			}
+		}
+	],
+	"connections": {
+		"When Stripe Checkout Completes": {
+			"main": [
+				[
+					{
+						"node": "Approve Sharetribe User",
+						"type": "main",
+						"index": 0
+					}
+				]
+			]
+		}
+	},
+	"pinData": {}
+}

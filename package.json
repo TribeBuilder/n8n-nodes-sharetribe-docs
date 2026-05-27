@@ -1,0 +1,29 @@
+{
+	"name": "n8n-nodes-sharetribe-docs",
+	"version": "0.1.0",
+	"private": true,
+	"description": "Documentation site for the n8n-nodes-sharetribe community node.",
+	"author": {
+		"name": "Greg Long",
+		"email": "greg@tribebuilder.dev"
+	},
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/tribebuilder/n8n-nodes-sharetribe-docs.git"
+	},
+	"scripts": {
+		"generate:template-docs": "npx tsx scripts/generateTemplateDocs.ts",
+		"docs:dev": "vitepress dev .",
+		"docs:build": "npm run generate:template-docs && vitepress build .",
+		"docs:preview": "vitepress preview .",
+		"docs:deploy": "npm run docs:build && gh-pages --dist .vitepress/dist --dotfiles --message \"Deploy docs $(date -u +%Y-%m-%dT%H:%M:%SZ) [skip ci]\""
+	},
+	"devDependencies": {
+		"@types/node": "^24.10.1",
+		"gh-pages": "^6.2.0",
+		"tsx": "^4.19.3",
+		"typescript": "5.9.2",
+		"vitepress": "^1.6.4"
+	}
+}

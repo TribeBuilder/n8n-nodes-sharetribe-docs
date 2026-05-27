@@ -1,0 +1,33 @@
+/* Site-wide custom styles layered on top of the VitePress default theme. */
+
+:root {
+	--vp-c-brand-1: #ec6042;
+	--vp-c-brand-2: #ef7558;
+	--vp-c-brand-3: #f28a72;
+	--vp-c-brand-soft: rgba(236, 96, 66, 0.14);
+}
+
+.dark {
+	--vp-c-brand-1: #ef7558;
+	--vp-c-brand-2: #f28a72;
+}
+
+.expert-badge-block {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.6rem;
+	margin: 2.5rem 0 1rem;
+	padding: 1.5rem;
+	border-top: 1px solid var(--vp-c-divider);
+}
+
+.expert-badge-block img {
+	max-width: 180px;
+	height: auto;
+}
+
+.expert-badge-block small {
+	color: var(--vp-c-text-2);
+	font-size: 0.85rem;
+}
