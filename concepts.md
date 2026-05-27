@@ -59,4 +59,8 @@ The trigger checks for new events on a schedule. Default is every minute; the in
 
 ## Rate limits
 
-Sharetribe's [Integration API has rate limits](https://www.sharetribe.com/api-reference/integration.html#rate-limits). The node handles transient hits with retries and backoff, but design defensively: stretch low-priority poll intervals, use **Count Only** when you only need a number, and avoid `Get Many` loops over thousands of records in tight succession.
+Sharetribe limits how many requests you can make to the [Integration API](https://www.sharetribe.com/api-reference/integration.html#rate-limits) per minute. The node automatically slows down and retries if you bump into the limit, so most workflows are fine without changes. A few tips if your marketplace is busy:
+
+- For triggers you don't need to be instant (e.g. weekly admin reports), set the poll interval to every 5 or 15 minutes instead of every minute.
+- On the **Get Many** action, switch on **Count Only** when you only need the number, not the records themselves.
+- Avoid workflows that pull thousands of records in a loop one after another - batch them or spread them out.

@@ -1,7 +1,5 @@
 import { defineConfig } from 'vitepress';
 
-const N8N_REFERRAL = 'https://n8n.partnerlinks.io/n8n-nodes-sharetribe';
-
 export default defineConfig({
 	title: 'n8n for Sharetribe',
 	description:
@@ -17,21 +15,10 @@ export default defineConfig({
 
 	themeConfig: {
 		nav: [
-			{ text: 'Get started', link: '/getting-started' },
-			{ text: 'Workflow templates', link: '/templates' },
-			{ text: 'What the node does', link: '/operations' },
-			{ text: 'How it works', link: '/concepts' },
+			{ text: 'Templates', link: '/templates' },
+			{ text: 'Set up', link: '/getting-started' },
 			{ text: 'FAQ', link: '/faq' },
-			{ text: 'Suggest a workflow', link: '/contributing' },
-			{
-				text: 'Links',
-				items: [
-					{ text: 'n8n (start free)', link: N8N_REFERRAL },
-					{ text: 'GitHub', link: 'https://github.com/tribebuilder/n8n-nodes-sharetribe' },
-					{ text: 'n8n Community', link: 'https://community.n8n.io/' },
-					{ text: 'Sharetribe Docs', link: 'https://www.sharetribe.com/docs/' },
-				],
-			},
+			{ text: 'GitHub', link: 'https://github.com/tribebuilder/n8n-nodes-sharetribe' },
 		],
 
 		sidebar: {
@@ -107,7 +94,7 @@ export default defineConfig({
 				{
 					text: 'Help',
 					items: [
-						{ text: 'FAQ & troubleshooting', link: '/faq' },
+						{ text: 'FAQ', link: '/faq' },
 						{ text: 'Suggest a workflow', link: '/contributing' },
 					],
 				},
@@ -120,7 +107,7 @@ export default defineConfig({
 
 		footer: {
 			message:
-				'Built and maintained by <a href="https://tribebuilder.dev">TribeBuilder</a> &middot; <a href="https://experts.sharetribe.com">verified Sharetribe Expert</a> &middot; verified n8n community node publisher.',
+				'Built and maintained by <a href="https://tribebuilder.dev">TribeBuilder</a> &middot; <a href="https://experts.sharetribe.com/l/greg-long-freelance-developer/6973f22c-9cdb-4b3a-b0bd-7aa5e3915fe0">verified Sharetribe Expert</a> &middot; verified n8n community node publisher.',
 			copyright: 'MIT licensed',
 		},
 

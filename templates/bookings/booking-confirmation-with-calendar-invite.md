@@ -7,7 +7,7 @@ description: ""
 **Category:** [Bookings](/templates/bookings/)
 
 <ClientOnly>
-  <TemplateActions slug="booking-confirmation-with-calendar-invite" category="bookings" source-url="https://github.com/tribebuilder/n8n-nodes-sharetribe/blob/main/workflows/public-templates/published/bookings/booking-confirmation-with-calendar-invite.json" />
+  <TemplateActions slug="booking-confirmation-with-calendar-invite" category="bookings" source-url="https://github.com/tribebuilder/n8n-nodes-sharetribe/blob/main/workflows/public-templates/published/bookings/booking-confirmation-with-calendar-invite.json" screenshot="/img/templates/booking-confirmation-with-calendar-invite.png" />
 </ClientOnly>
 
 ## How it works
@@ -30,18 +30,6 @@ description: ""
 ## Customization
 
 You can update the branding color logic in **Get Branding Color** and the footer in **Get Email Footer Text** to pull from different Sharetribe asset keys. The HTML template in **Render Email HTML** can be redesigned to match your marketplace's style.
-
-## Import this workflow
-
-The fastest way: click **Copy template JSON** above, then paste it onto your n8n workflow canvas.
-
-Step by step:
-
-1. Click **Copy template JSON** above (or **Download JSON** to save the file).
-2. In n8n, open a new workflow.
-3. Paste with **Ctrl/Cmd+V** directly on the canvas. n8n imports every node, sticky note, and connection.
-4. Reconnect the credentials called out in the setup steps above.
-5. Click **Publish** in the top-right to turn the workflow on.
 
 ::: tip Recommended
 Set up an [error workflow](https://docs.n8n.io/flow-logic/error-handling/) so you're notified if anything goes wrong - the same step applies to any n8n workflow you run in production.
