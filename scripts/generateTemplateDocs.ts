@@ -215,15 +215,7 @@ function renderPage(args: {
 		`<ClientOnly>\n  <TemplateActions slug="${slug}" category="${category}" source-url="${sourceUrl}"${screenshotProp} />\n</ClientOnly>\n\n`;
 
 	const footer =
-		`\n## Import this workflow\n\n` +
-		`The fastest way: click **Copy template JSON** above, then paste it onto your n8n workflow canvas.\n\n` +
-		`Step by step:\n\n` +
-		`1. Click **Copy template JSON** above (or **Download JSON** to save the file).\n` +
-		`2. In n8n, open a new workflow.\n` +
-		`3. Paste with **Ctrl/Cmd+V** directly on the canvas. n8n imports every node, sticky note, and connection.\n` +
-		`4. Reconnect the credentials called out in the setup steps above.\n` +
-		`5. Click **Publish** in the top-right to turn the workflow on.\n\n` +
-		`::: tip Recommended\n` +
+		`\n::: tip Recommended\n` +
 		`Set up an [error workflow](https://docs.n8n.io/flow-logic/error-handling/) so you're notified if anything goes wrong - the same step applies to any n8n workflow you run in production.\n` +
 		`:::\n\n` +
 		`[← Back to ${categoryLabel(category)}](/templates/${category}/) · [All workflow templates](/templates)\n`;

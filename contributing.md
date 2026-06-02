@@ -16,7 +16,7 @@ Same place - [open an issue](https://github.com/tribebuilder/n8n-nodes-sharetrib
 
 ## Need custom work?
 
-[TribeBuilder](https://tribebuilder.dev) - the maintainer - is a verified Sharetribe Expert and takes on paid custom workflows and integrations for marketplaces that want a faster turnaround than the open-source roadmap.
+[TribeBuilder](https://tribebuilder.dev) - the maintainer - is a verified Sharetribe Expert and takes on paid custom workflows and integrations.
 
 ## Want to contribute code?
 

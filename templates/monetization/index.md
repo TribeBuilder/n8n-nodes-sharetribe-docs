@@ -8,8 +8,8 @@ description: "Sharetribe n8n workflow templates - Monetization."
 
 The workflow is triggered when a Stripe Checkout session completes.
 
-### [Approve User After Stripe Membership Fee](/templates/monetization/approve-user-after-stripe-membership-fee)
+### [Untitled workflow](/templates/monetization/approve-user-after-stripe-membership-fee)
 
-The Stripe trigger fires when a Stripe Checkout session is completed.
+A Stripe Checkout completion event triggers the workflow when a customer finishes a payment session.
 
 [← All templates](/templates)

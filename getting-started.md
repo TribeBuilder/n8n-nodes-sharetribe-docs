@@ -48,4 +48,4 @@ New to n8n? See [n8n's Try it out guide](https://docs.n8n.io/try-it-out/).
 ## Next
 
 - [Workflow templates](/templates) - copy and paste a ready-made workflow.
-- [FAQ](/faq) - common gotchas.
+- [FAQ](/faq) - what n8n is, what this node does, plans, support.

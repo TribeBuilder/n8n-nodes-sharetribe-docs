@@ -7,7 +7,7 @@ description: ""
 **Category:** [Transactions](/templates/transactions/)
 
 <ClientOnly>
-  <TemplateActions slug="sms-provider-on-new-transaction" category="transactions" source-url="https://github.com/tribebuilder/n8n-nodes-sharetribe/blob/main/workflows/public-templates/published/transactions/sms-provider-on-new-transaction.json" />
+  <TemplateActions slug="sms-provider-on-new-transaction" category="transactions" source-url="https://github.com/tribebuilder/n8n-nodes-sharetribe/blob/main/workflows/public-templates/published/transactions/sms-provider-on-new-transaction.json" screenshot="/img/templates/sms-provider-on-new-transaction.png" />
 </ClientOnly>
 
 ## How it works
