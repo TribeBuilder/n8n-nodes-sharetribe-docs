@@ -30,4 +30,4 @@ Connect new sign-ups to the tools where you run your marketing and ops.
 
 ## Want a workflow that isn't here?
 
-Open a [GitHub issue](https://github.com/tribebuilder/n8n-nodes-sharetribe/issues/new) and describe the job you want to automate. Contributions welcome - see [Contributing](/contributing).
+Need it built for you? [TribeBuilder](https://tribebuilder.dev) builds custom Sharetribe + n8n workflows to spec. Or hire a verified marketplace specialist on the [Sharetribe Expert marketplace](https://experts.sharetribe.com/).
