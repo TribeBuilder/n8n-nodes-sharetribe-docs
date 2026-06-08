@@ -9,7 +9,7 @@ export default defineConfig({
 	lastUpdated: true,
 
 	head: [
-		['link', { rel: 'icon', href: '/n8n-nodes-sharetribe-docs/favicon.ico' }],
+		['link', { rel: 'icon', type: 'image/svg+xml', href: '/n8n-nodes-sharetribe-docs/favicon.svg' }],
 		['meta', { name: 'theme-color', content: '#ec6042' }],
 	],
 
@@ -105,7 +105,6 @@ export default defineConfig({
 					text: 'Help',
 					items: [
 						{ text: 'FAQ', link: '/faq' },
-						{ text: 'Suggest a workflow', link: '/contributing' },
 					],
 				},
 			],
