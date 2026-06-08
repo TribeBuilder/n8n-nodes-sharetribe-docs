@@ -1,8 +1,8 @@
 ---
-title: "Untitled workflow"
+title: "Booking confirmation with calendar invite"
 description: ""
 ---
-# Untitled workflow
+# Booking confirmation with calendar invite
 
 **Category:** [Bookings](/templates/bookings/)
 

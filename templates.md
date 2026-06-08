@@ -22,6 +22,12 @@ Charge for listing or sign-up by gating Sharetribe approval behind a Stripe paym
 - [Approve listing after a Stripe Checkout fee](/templates/monetization/approve-listing-after-stripe-checkout-fee)
 - [Approve user after a Stripe membership fee](/templates/monetization/approve-user-after-stripe-membership-fee)
 
+## Transactions
+
+Notify people the moment a transaction kicks off.
+
+- [SMS the provider when a new transaction is initiated](/templates/transactions/sms-provider-on-new-transaction)
+
 ## User onboarding
 
 Connect new sign-ups to the tools where you run your marketing and ops.

@@ -73,6 +73,16 @@ export default defineConfig({
 							],
 						},
 						{
+							text: 'Transactions',
+							collapsed: true,
+							items: [
+								{
+									text: 'SMS provider on new transaction',
+									link: '/templates/transactions/sms-provider-on-new-transaction',
+								},
+							],
+						},
+						{
 							text: 'User onboarding',
 							collapsed: true,
 							items: [

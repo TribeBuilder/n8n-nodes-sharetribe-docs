@@ -1,8 +1,8 @@
 ---
-title: "Untitled workflow"
+title: "Approve user after Stripe membership fee"
 description: ""
 ---
-# Untitled workflow
+# Approve user after Stripe membership fee
 
 **Category:** [Monetization](/templates/monetization/)
 
